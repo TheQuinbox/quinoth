@@ -27,8 +27,8 @@ class AccountManager:
 		pub.subscribe(self.show_gui, "account_manager.show_gui")
 
 	def load_accounts(self):
-		for id in self.account_path.iterdir():
-			self.load_account(id)
+		for path in self.account_path.iterdir():
+			self.load_account(path.name)
 
 	def load_account(self, id):
 		account = Account(id)
@@ -66,7 +66,6 @@ class AccountManager:
 class Account:
 	def __init__(self, id):
 		self.id = id
-		print(self.id)
 		self.access_token = ""
 		self.instance_url = ""
 		self.api = None
