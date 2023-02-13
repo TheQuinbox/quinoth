@@ -1,0 +1,5 @@
+git+https://github.com/accessibleapps/basic_config.git
+loguru==0.6.0
+mastodon.py==1.8.0
+pypubsub==4.0.3
+wxpython==4.2.0
